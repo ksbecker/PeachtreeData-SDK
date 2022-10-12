@@ -2,7 +2,7 @@
 
 namespace PeachtreeData.Sdk.Models;
 
-public class CassRequest
+public class AddressRequest
 {
     [JsonProperty(PropertyName = "companyname")]
     public string? CompanyName { get; set; }

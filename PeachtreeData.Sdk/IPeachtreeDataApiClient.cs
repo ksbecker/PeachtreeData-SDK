@@ -8,5 +8,8 @@ namespace PeachtreeData.Sdk;
 public interface IPeachtreeDataApiClient
 {
     [Post("/AddressCleanse")]
-    Task<CassResponse> AddressCleanse([Body(true)] List<CassRequest> addresses, CancellationToken cancellationToken = default);
+    Task<CassResponse> AddressCleanseAsync([Body(true)] List<AddressRequest> addresses, CancellationToken cancellationToken = default);
+
+    [Post("/AddressCleanse")]
+    Task<CassResponse> AddressCleanseAsync([Body(true)] List<LineRequest> addresses, CancellationToken cancellationToken = default);
 }
